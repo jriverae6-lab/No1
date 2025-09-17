@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vacantes - Ingenio Tulula</title>
+  <style>
+    :root{--accent:#0b6;--muted:#666}
+    body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; margin:0; background:#f7f9fb; color:#14213d}
+    header{background:linear-gradient(90deg,#083344, #0b4c6b); color:white; padding:28px 20px}
+    .container{max-width:1000px;margin:20px auto;padding:0 16px}
+    h1{margin:0;font-size:28px}
+    p.lead{margin-top:6px; color:#dbe9ef}
+    .grid{display:grid;grid-template-columns:1fr 320px;gap:20px}
+    .card{background:white;border-radius:12px;padding:18px;box-shadow:0 6px 18px rgba(16,24,40,0.06)}
+    .jobs-list{display:flex;flex-direction:column;gap:12px}
+    .job{border:1px solid #e6eef2;border-radius:10px;padding:14px}
+    .job h3{margin:0 0 6px 0}
+    .meta{font-size:14px;color:var(--muted);margin-bottom:8px}
+    .badge{display:inline-block;padding:6px 8px;border-radius:999px;background:#eef7f5;color:#056242;font-weight:600;font-size:13px}
+    .toggle{cursor:pointer;display:flex;justify-content:space-between;align-items:center}
+    .details{margin-top:10px;border-top:1px dashed #e6eef2;padding-top:10px;display:none}
+    .specs{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+    .specs dt{font-weight:700}
+    .specs dd{margin:0;color:#264653}
+    aside .card p{margin:0 0 8px 0}
+    footer{max-width:1000px;margin:18px auto;color:#44566b;font-size:14px;padding:0 16px}
+    @media (max-width:900px){.grid{grid-template-columns:1fr}.specs{grid-template-columns:1fr}}
+    .salary{font-weight:800;color:#1b6b3a}
+    .apply{margin-top:12px;display:inline-block;padding:8px 12px;border-radius:8px;background:var(--accent);color:white;text-decoration:none}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Ingenio Tulula — Bolsa de Trabajo</h1>
+      <p class="lead">Listado de 21 puestos de trabajo, requisitos y especificaciones. Los rangos salariales son aproximados y pueden ajustarse según experiencia, carga de trabajo y temporada (zafra).</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="grid">
+      <section>
+        <div class="card">
+          <h2>Puestos disponibles</h2>
+          <div class="jobs-list">
+
+            <!-- Dirección General -->
+            <article class="job"><div class="toggle" onclick="toggleDetails(this)"><div><h3>Director General</h3><div class="meta">Dirección General • Oficina ejecutiva</div></div><div class="badge">Aprox. Q40,000 - Q100,000 / mes</div></div><div class="details"><dl class="specs"><dt>Requisitos</dt><dd>Formación universitaria en Administración, Economía o Ingeniería Industrial. Mínimo 10 años en puestos directivos.</dd><dt>Responsabilidades</dt><dd>Define estrategia organizacional, aprueba planes de producción y recursos, representación legal.</dd><dt>Condiciones</dt><dd>Oficina ejecutiva, reuniones frecuentes, viajes, alta presión por metas.</dd><dt>Otros</dt><dd>Visión de negocio, negociación, comunicación y manejo de crisis.</dd></dl></div></article>
+
+            <!-- Gerencias -->
+            <article class="job"><div class="toggle" onclick="toggleDetails(this)"><div><h3>Gerente de Recursos Humanos</h3><div class="meta">Gerencia • Oficina administrativa</div></div><div class="badge">Aprox. Q18,000 - Q35,000 / mes</div></div><div class="details"><dl class="specs"><dt>Requisitos</dt><dd>Licenciatura en Psicología, Administración o afín. 5+ años en gestión de talento.</dd><dt>Responsabilidades</dt><dd>Contratación, inducción, capacitación, supervisión de cumplimiento de políticas laborales.</dd><dt>Condiciones</dt><dd>Oficina, interacción con todo el personal.</dd><dt>Otros</dt><dd>Empatía, discreción, resolución de conflictos.</dd></dl></div></article>
+
+            <article class="job"><div class="toggle" onclick="toggleDetails(this)"><div><h3>Gerente de Informática</h3><div class="meta">Gerencia • Oficina / Sala de servidores</div></div><div class="badge">Aprox. Q16,000 - Q32,000 / mes</div></div><div class="details"><dl class="specs"><dt>Requisitos</dt><dd>Ingeniería en Sistemas o Informática. 5+ años en administración de TI.</dd><dt>Responsabilidades</dt><dd>Gestión de sistemas, seguridad digital, soporte a procesos.</dd><dt>Condiciones</dt><dd>Oficina, ocasional trabajo en campo, presión por fallas críticas.</dd><dt>Otros</dt><dd>Capacidad analítica y liderazgo técnico.</dd></dl></div></article>
+
+            <article class="job"><div class="toggle" onclick="toggleDetails(this)"><div><h3>Gerente de Fábrica</h3><div class="meta">Gerencia • Planta industrial</div></div><div class="badge">Aprox. Q18,000 - Q40,000 / mes</div></div><div class="details"><dl class="specs"><dt>Requisitos</dt><dd>Ingeniería Industrial, Mecánica o Química. 7+ años en procesos industriales.</dd><dt>Responsabilidades</dt><dd>Supervisar producción de azúcar y derivados; garantizar calidad y seguridad.</dd><dt>Condiciones</dt><dd>Planta industrial: ruido, calor y riesgos mecánicos.</dd><dt>Otros</dt><dd>Enfoque en resultados, liderazgo bajo presión.</dd></dl></div></article>
+
+            <article class="job"><div class="toggle" onclick="toggleDetails(this)"><div><h3>Gerente de MTT (Maquinaria, Talleres y Transportes)</h3><div class="meta">Gerencia • Talleres y campo</div></div><div class="badge">Aprox. Q16,000 - Q34,000 / mes</div></div><div class="details"><dl class="specs"><dt>Requisitos</dt><dd>Ingeniería Mecánica o afín. 5+ años en mantenimiento y gestión de flota.</dd><dt>Responsabilidades</dt><dd>Planificación de mantenimiento preventivo y correctivo; disponibilidad de maquinaria y transporte.</dd><dt>Condiciones</dt><dd>Talleres y campo, exposición a riesgos mecánicos, horarios extendidos en zafra.</dd><dt>Otros</dt><dd>Capacidad de organización y liderazgo técnico.</dd></dl></div></article>
+
+            <article class="job"><div class="toggle" onclick="toggleDetails(this)"><div><h3>Gerente Agrícola</h3><div class="meta">Gerencia • Trabajo en campo</div></div><div class="badge">Aprox. Q15,000 - Q30,000 / mes</div></div><div class="details"><dl class="specs"><dt>Requisitos</dt><dd>Ingeniería Agronómica o afín. 5+ años en gestión agrícola.</dd><dt>Responsabilidades</dt><dd>Planificación y supervisión de siembra, cultivo y cosecha.</dd><dt>Condiciones</dt><dd>Trabajo en campo, exposición a clima y estacionalidad.</dd><dt>Otros</dt><dd>Resiliencia y gestión de personal operativo.</dd></dl></div></article>
+
+            <!-- Jefaturas -->
+            <article class="job"><div class="toggle" onclick="toggleDetails(this)"><div><h3>Jefe de Departamento de RRHH</h3><div class="meta">Jefatura • Oficina administrativa</div></div><div class="badge">Aprox. Q10,000 - Q18,000 / mes</div></div><div class="details"><dl class="specs"><dt>Requisitos</dt><dd>Licenciatura en Psicología o Administración. Experiencia en contratación y gestión administrativa.</dd><dt>Responsabilidades</dt><dd>Coordinar inducción, capacitación y control de personal.</dd><dt>Condiciones</dt><dd>Oficina, interacción con supervisores y empleados.</dd><dt>Otros</dt><dd>Liderazgo intermedio y comunicación efectiva.</dd></dl></div></article>
+
+            <article class="job"><div class="toggle" onclick="toggleDetails(this)"><div><h3>Jefe de Departamento de Informática</h3><div class="meta">Jefatura • Sala de servidores</div></div><div class="badge">Aprox. Q9,000 - Q16,000 / mes</div></div><div class="details"><dl class="specs"><dt>Requisitos</dt><dd>Ingeniería en Sistemas o Técnico Superior. 3+ años en soporte.</dd><dt>Responsabilidades</dt><dd>Planificación y control de soporte técnico y mantenimiento de redes.</dd><dt>Condiciones</dt><dd>Oficina y server-room; horarios extendidos en emergencias.</dd><dt>Otros</dt><dd>Diagnóstico rápido y liderazgo técnico.</dd></dl></div></article>
+
+            <article class="job"><div class="toggle" onclick="toggleDetails(this)"><div><h3>Jefe de Departamento de Fábrica</h3><div class="meta">Jefatura • Planta industrial</div></div><div class="badge">Aprox. Q10,000 - Q20,000 / mes</div></div><div class="details"><dl class="specs"><dt>Requisitos</dt><dd>Ingeniería Industrial o Mecánica. Experiencia en procesos de producción.</dd><dt>Responsabilidades</dt><dd>Coordinar procesos de producción, calidad y seguridad industrial.</dd><dt>Condiciones</dt><dd>Planta industrial con exposición a riesgos.</dd><dt>Otros</dt><dd>Organización y atención a detalles.</dd></dl></div></article>
+
+            <article class="job"><div class="toggle" onclick="toggleDetails(this)"><div><h3>Jefe de Departamento de MTT</h3><div class="meta">Jefatura • Talleres</div></div><div class="badge">Aprox. Q9,500 - Q18,000 / mes</div></div><div class="details"><dl class="specs"><dt>Requisitos</dt><dd>Ingeniería Mecánica o Técnico superior en mantenimiento.</dd><dt>Responsabilidades</dt><dd>Supervisar mantenimiento y disponibilidad de equipo.</dd><dt>Condiciones</dt><dd>Talleres; horarios extendidos en zafra.</dd><dt>Otros</dt><dd>Planeación y control técnico.</dd></dl></div></article>
+
+            <article class="job"><div class="toggle" onclick="toggleDetails(this)"><div><h3>Jefe de Departamento de Campo</h3><div class="meta">Jefatura • Campo</div></div><div class="badge">Aprox. Q9,000 - Q17,000 / mes</div></div><div class="details"><dl class="specs"><dt>Requisitos</dt><dd>Ingeniería Agronómica o experiencia agrícola.</dd><dt>Responsabilidades</dt><dd>Planificar y dirigir actividades agrícolas.</dd><dt>Condiciones</dt><dd>Trabajo en campo; exposición a clima.</dd><dt>Otros</dt><dd>Organización y liderazgo de cuadrillas.</dd></dl></div></article>
+
+            <!-- Supervisores -->
+            <article class="job"><div class="toggle" onclick="toggleDetails(this)"><div><h3>Supervisor de Área de RRHH</h3><div class="meta">Supervisor • Oficina administrativa</div></div><div class="badge">Aprox. Q6,000 - Q12,000 / mes</div></div><div class="details"><dl class="specs"><dt>Requisitos</dt><dd>Técnico o estudiante universitario en Psicología/Administración.</dd><dt>Responsabilidades</dt><dd>Supervisar procesos de contratación y administración de personal.</dd><dt>Condiciones</dt><dd>Oficina; contacto con jefaturas.</dd><dt>Otros</dt><dd>Organización y discreción.</dd></dl></div></article>
+
+            <article class="job"><div class="toggle" onclick="toggleDetails(this)"><div><h3>Supervisor de Área de Informática</h3><div class="meta">Supervisor • Sala de servidores</div></div><div class="badge">Aprox. Q6,500 - Q12,500 / mes</div></div><div class="details"><dl class="specs"><dt>Requisitos</dt><dd>Técnico en informática; 2+ años de experiencia.</dd><dt>Responsabilidades</dt><dd>Supervisar soporte técnico y redes.</dd><dt>Condiciones</dt><dd>Oficina, atención a fallas.</dd><dt>Otros</dt><dd>Rapidez en solución de problemas.</dd></dl></div></article>
+
+            <article class="job"><div class="toggle" onclick="toggleDetails(this)"><div><h3>Supervisor de Área de Fábrica</h3><div class="meta">Supervisor • Planta industrial</div></div><div class="badge">Aprox. Q7,000 - Q13,000 / mes</div></div><div class="details"><dl class="specs"><dt>Requisitos</dt><dd>Técnico industrial o experiencia en producción.</dd><dt>Responsabilidades</dt><dd>Supervisar líneas de producción y seguridad.</dd><dt>Condiciones</dt><dd>Planta; exposición a ruido y calor.</dd><dt>Otros</dt><dd>Organización y disciplina.</dd></dl></div></article>
+
+            <article class="job"><div class="toggle" onclick="toggleDetails(this)"><div><h3>Supervisor de Área de MTT</h3><div class="meta">Supervisor • Talleres</div></div><div class="badge">Aprox. Q6,500 - Q12,500 / mes</div></div><div class="details"><dl class="specs"><dt>Requisitos</dt><dd>Técnico mecánico automotriz o industrial.</dd><dt>Responsabilidades</dt><dd>Supervisar mantenimiento de equipo y transporte.</dd><dt>Condiciones</dt><dd>Taller; esfuerzo físico.</dd><dt>Otros</dt><dd>Atención a detalle.</dd></dl></div></article>
+
+            <article class="job"><div class="toggle" onclick="toggleDetails(this)"><div><h3>Supervisor de Área de Campo</h3><div class="meta">Supervisor • Campo</div></div><div class="badge">Aprox. Q6,000 - Q11,000 / mes</div></div><div class="details"><dl class="specs"><dt>Requisitos</dt><dd>Técnico agrícola o experiencia comprobable (3 años).</dd><dt>Responsabilidades</dt><dd>Organizar cuadrillas y supervisar siembra y cosecha.</dd><dt>Condiciones</dt><dd>Campo abierto; exposición a clima extremo.</dd><dt>Otros</dt><dd>Comunicación con jornaleros y resistencia física.</dd></dl></div></article>
+
+            <!-- Operativos -->
+            <article class="job"><div class="toggle" onclick="toggleDetails(this)"><div><h3>Oficinista de RRHH</h3><div class="meta">Operativo • Oficina administrativa</div></div><div class="badge">Aprox. Q3,500 - Q6,500 / mes</div></div><div class="details"><dl class="specs"><dt>Requisitos</dt><dd>Bachiller en computación o secretariado. Conocimiento en manejo de expedientes.</dd><dt>Responsabilidades</dt><dd>Archivo, control de documentos y apoyo administrativo.</dd><dt>Condiciones</dt><dd>Oficina, horarios regulares.</dd><dt>Otros</dt><dd>Orden y responsabilidad.</dd></dl></div></article>
+
+            <article class="job"><div class="toggle" onclick="toggleDetails(this)"><div><h3>Perito de Cómputo</h3><div class="meta">Operativo • Oficina informática</div></div><div class="badge">Aprox. Q4,000 - Q7,500 / mes</div></div><div class="details"><dl class="specs"><dt>Requisitos</dt><dd>Perito en computación o técnico en sistemas.</dd><dt>Responsabilidades</dt><dd>Apoyo en programación, bases de datos y soporte a usuarios.</dd><dt>Condiciones</dt><dd>Oficina con horarios regulares, apoyo en emergencias.</dd><dt>Otros</dt><dd>Responsabilidad y capacidad analítica
+              </dd>
+            </dl>
+          </div>
+        </article>
+
+        <!-- Mecánico -->
+        <article class="job">
+          <div class="toggle" onclick="toggleDetails(this)">
+            <div>
+              <h3>Mecánico</h3>
+              <div class="meta">Operativo • Taller / Planta</div>
+            </div>
+            <div class="badge">Aprox. Q4,000 - Q8,000 / mes</div>
+          </div>
+          <div class="details">
+            <dl class="specs">
+              <dt>Requisitos Intelectuales</dt>
+              <dd>Técnico en mecánica automotriz o industrial. Experiencia en mantenimiento de maquinaria.</dd>
+              <dt>Responsabilidades adquiridas</dt>
+              <dd>Reparación preventiva y correctiva de motores y equipos.</dd>
+              <dt>Condiciones de Trabajo</dt>
+              <dd>Talleres y planta, exposición a grasa, calor y riesgos mecánicos.</dd>
+              <dt>Otros requisitos</dt>
+              <dd>Destreza manual, responsabilidad en el uso de herramientas.</dd>
+            </dl>
+          </div>
+        </article>
+
+        <!-- Jornalero -->
+        <article class="job">
+          <div class="toggle" onclick="toggleDetails(this)">
+            <div>
+              <h3>Jornalero</h3>
+              <div class="meta">Operativo • Campo</div>
+            </div>
+            <div class="badge">Aprox. Q2,500 - Q4,500 / mes</div>
+          </div>
+          <div class="details">
+            <dl class="specs">
+              <dt>Requisitos Intelectuales</dt>
+              <dd>Sin formación formal requerida, preferible experiencia en labores agrícolas.</dd>
+              <dt>Responsabilidades adquiridas</dt>
+              <dd>Preparación de tierra, siembra, cultivo y cosecha.</dd>
+              <dt>Condiciones de Trabajo</dt>
+              <dd>Campo abierto, exposición a sol, lluvia y esfuerzo físico.</dd>
+              <dt>Otros requisitos</dt>
+              <dd>Resistencia física, disposición al trabajo en cuadrillas, disciplina en tareas asignadas.</dd>
+            </dl>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <aside>
+    <div class="card">
+      <h3>Resumen de plazas</h3>
+      <p>Actualmente el Ingenio Tulula ofrece <strong>21 plazas</strong> distribuidas de la siguiente manera:</p>
+      <ul>
+        <li>1 Dirección General</li>
+        <li>5 Gerencias</li>
+        <li>5 Jefaturas de Departamento</li>
+        <li>5 Supervisores de Área</li>
+        <li>5 Puestos Operativos (Oficinista de RRHH, Perito de Cómputo, Mecánico, Jornalero, más apoyo administrativo)</li>
+      </ul>
+      <p>Este listado está basado en el análisis de puestos proporcionado por la empresa (documento "Fase 2 Analisis de Puestos").</p>
+      <p>Los sueldos mostrados son aproximados y orientativos.</p>
+      <p style="margin-top:10px;font-size:13px;color:var(--muted)">Contacto de RRHH: rrhh@ingeniotulula.gt (ejemplo)</p>
+    </div>
+
+    <div class="card" style="margin-top:12px">
+      <h4>Filtros</h4>
+      <p style="margin:8px 0">Buscar por palabra:</p>
+      <input id="search" placeholder="ej. 'Agrícola', 'Informática'" style="width:100%;padding:8px;border-radius:8px;border:1px solid #e6eef2" oninput="filterJobs()" />
+    </div>
+  </aside>
+</div>
+</main>
+
+<footer>
+  <div class="container">Documento generado a partir del archivo de análisis de puestos proporcionado.</div>
+</footer>
+
+<script>
+  function toggleDetails(el){
+    const details = el.parentElement.querySelector('.details');
+    if(!details) return;
+    details.style.display = details.style.display === 'block' ? 'none' : 'block';
+  }
+  function filterJobs(){
+    const q = document.getElementById('search').value.toLowerCase();
+    document.querySelectorAll('.job').forEach(job=>{
+      const text = job.innerText.toLowerCase();
+      job.style.display = text.includes(q) ? '' : 'none';
+    });
+  }
+</script>
+</body>
+</html>
